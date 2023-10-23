@@ -26,6 +26,10 @@ Flags:
 ```
 <NEED TO FILL IN>
 ```
+#### Visual Workflow
+```
+<NEED TO FILL IN>
+```
 ## Installation
 You can install `kubectl connect` either via source, or by using the [Krew](https://github.com/kubernetes-sigs/krew) plugin manager.
 
