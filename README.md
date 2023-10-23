@@ -7,6 +7,25 @@
 |_\_\\_,_|_.__/\___\__|\__|_| \__\___/_||_|_||_\___\__|\__|
 ```
 
+## Usage
+#### Command Flags
+```
+Usage:
+  kubectl connect [flags]
+  kubectl [command]
+
+Flags:
+  -d, --destination string   Destination pod name
+  -h, --help                 help for kubectl
+  -n, --namespace string     Namespace (default "default")
+  -p, --port int             Port (default 22)
+  -s, --source string        Source pod name
+  -t, --timeout int          Timeout in seconds (default 10)
+```
+#### Usage Example
+```
+<NEED TO FILL IN>
+```
 ## Installation
 You can install `kubectl connect` either via source, or by using the [Krew](https://github.com/kubernetes-sigs/krew) plugin manager.
 
