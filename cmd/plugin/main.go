@@ -18,7 +18,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 package main
 
 import (
-	"github.com/awslabs/kubectl-connect/cmd/plugin/cli"
+	//	"github.com/awslabs/kubectl-connect/cmd/plugin/cli"
+	"github.com/awslabs/kubectl-connect/tree/layout_update/cmd/plugin/cli"
 )
 
 func main() {

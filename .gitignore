@@ -8,3 +8,6 @@ bin/
 
 ## Test binaries built via `go test -c'
 *.test
+
+## Go coverage data
+*.out
