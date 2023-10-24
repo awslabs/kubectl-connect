@@ -1,0 +1,28 @@
+project_name: kubectl-connect
+release:
+  github:
+    owner: awslabs
+    name: kubectl-connect
+builds:
+  - id: kubectl-connect
+    goos:
+    - linux
+    - windows
+    - darwin
+    goarch:
+    - amd64
+    - arm64
+    env:
+      - CGO_ENABLED=0
+      - GO111MODULE=on
+    main: cmd/plugin/main.go
+    ldflags: -s -w -X github.com/awslabs/kubectl-connect/pkg/version.version=
+archives:
+  - id: kubectl-connect
+    builds:
+      - kubectl-connect
+    name_template: "{{ .ProjectName }}_{{ .0s }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+        

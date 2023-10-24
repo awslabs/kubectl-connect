@@ -60,12 +60,7 @@ You can install `kubectl connect` either via source, or by using the [Krew](http
 - [krew](https://github.com/kubernetes-sigs/krew) - Plug-In Package Manager for `kubectl`
 - [Go](https://www.golang.org/) - Version 1.21
 
-## Bug reports
-
-* If you have a problem with `kubectl-connect` itself, please file an
-  issue in this repository.
-
-## Security
+## Bug Reports, Contributing and Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
