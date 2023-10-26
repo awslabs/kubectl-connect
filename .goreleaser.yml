@@ -21,7 +21,7 @@ archives:
   - id: kubectl-connect
     builds:
       - kubectl-connect
-    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Arch }}"
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
     format_overrides:
       - goos: windows
         format: zip
