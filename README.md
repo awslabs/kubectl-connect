@@ -24,12 +24,12 @@ Flags:
 ```
 #### Usage Example
 ```
-<NEED TO FILL IN>
+% kubectl connect -d pod02 -s pod01 -n default -p 22
+Checking connectivity from pod01 to pod02 on port 22 in namepsace default....
+SUCCESS!
+Connectivity between pod01 and pod02 is OK.  Took 5.95197872s.
 ```
-#### Visual Workflow
-```
-<NEED TO FILL IN>
-```
+
 ## Installation
 You can install `kubectl connect` either via source, or by using the [Krew](https://github.com/kubernetes-sigs/krew) plugin manager.
 
