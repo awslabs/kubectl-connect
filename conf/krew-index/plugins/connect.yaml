@@ -1,0 +1,59 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: connect
+spec:
+  version: v0.1.0
+  homepage: https://github.com/awslabs/kubectl-connect
+  shortDescription: "Validate the connectivity between two pods on a given TCP port."
+  description: |
+    "This plugin validates the connectivity between two pods on a given TCP port, and can also
+    specify the timeout of the test, as well as the namespace in which the pods are located."
+  caveats: |
+    "* For resources that are not in the default namespace, currently you must specifiy
+    -n/--namespace explicitly."
+  platforms:
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+      uri: https://github.com/awslabs/kubectl-connect/releases/download/v0.1.0/kubectl-connect_darwin_amd64.tar.gz
+      sha: 1c95b7cef64c5f0a61724d10748baa68cde8b39ae68bbab589e48ebeb03d9039
+      bin: kubectl-connect
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+      uri: https://github.com/awslabs/kubectl-connect/releases/download/v0.1.0/kubectl-connect_darwin_arm64.tar.gz
+      sha: 4fcb248c60f7d32faea6af79c7f57b0aff6bbba645c2045a1b7bbbc106b38f0f
+      bin: kubectl-connect
+    - selector:
+        matchLabels:
+          os: linux
+          arch: amd64
+      uri: https://github.com/awslabs/kubectl-connect/releases/download/v0.1.0/kubectl-connect_linux_amd64.tar.gz
+      sha: 11b523e5861382b58e15895a93003e6c2bfd19faca7ae1117fc682264a1e87bb
+      bin: kubectl-connect
+    - selector:
+        matchLabels:
+          os: linux
+          arch: arm64
+      uri: https://github.com/awslabs/kubectl-connect/releases/download/v0.1.0/kubectl-connect_linux_arm64.tar.gz
+      sha: 455efef4822cbf5a88cdb04a22297274b90d6c0ce4b52e15e6dee1e99a52ad01
+      bin: kubectl-connect
+    - selector:
+        matchLabels:
+          os: windows
+          arch: amd64
+      uri: https://github.com/awslabs/kubectl-connect/releases/download/v0.1.0/kubectl-connect_windows_amd64.zip
+      sha: b346bca968a96f1a665a4bbf2e07569542af2264c7f454dbff9ce8fc246ca37b
+      bin: kubectl-connect.exe
+    - selector:
+        matchLabels:
+          os: windows
+          arch: arm64
+      uri: https://github.com/awslabs/kubectl-connect/releases/download/v0.1.0/kubectl-connect_windows_arm64.zip
+      sha: 043c9528b2cc4853c3045a60e582e10c03e32cbd776a10eb7b4cfd9ef88533b3
+      bin: kubectl-connect.exe
+      
+    
