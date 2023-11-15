@@ -6,7 +6,7 @@ test:
 
 .PHONY: bin
 bin: fmt vet
-	go build -o bin/kubectl-connect github.com/chrsmeca/kubectl-connect/cmd/plugin
+	go build -o bin/kubectl-connect github.com/awslabs/kubectl-connect/cmd/plugin
 
 .PHONY: fmt
 fmt:
