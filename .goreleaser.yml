@@ -25,3 +25,5 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
+signs:
+  artifacts: all
