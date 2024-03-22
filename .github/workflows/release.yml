@@ -15,9 +15,7 @@ jobs:
         with:
           go-version: 1.21
       - name: Install cosign
-        run: |
-          curl -sSL https://get.sigstore.dev/cosign | sh
-          cosign version
+        uses: sigstore/cosign-installer@main
       - name: Load cosign private key
         env:
           COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
