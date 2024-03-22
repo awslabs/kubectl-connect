@@ -26,4 +26,7 @@ archives:
       - goos: windows
         format: zip
 signs:
-  artifacts: all
+  - artifacts: all
+    cmd: cosign
+    args: ["sign-blob", "-key=${{ .Env.COSIGN_KEY }}", "${artifact}"]
+    signature: "${artifact}.sig"
