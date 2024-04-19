@@ -3,10 +3,10 @@ release:
   github:
     owner: awslabs
     name: kubectl-connect
-  sign:
-    artifacts: checksum
+signs:
+  - artifacts: checksum
     cmd: gpg
-    args: ["--batch", "--yes", "--output", "${signature}", "--detach-sign", "${artifact}"]
+    args: ["--batch", "--yes", "--output", "{{ .SignaturePath }}", "--detach-sign", "{{ .Path }}"]
 builds:
   - id: kubectl-connect
     goos:
