@@ -6,7 +6,7 @@ release:
 signs:
   - artifacts: checksum
     cmd: gpg
-    args: ["--batch", "--yes", "--output", "{{ .SignaturePath }}", "--detach-sign", "{{ .Path }}"]
+    args: ["--batch", "--yes", "--output", "${artifact}.sig", "--detach-sign", "${artifact}"]
 builds:
   - id: kubectl-connect
     goos:
