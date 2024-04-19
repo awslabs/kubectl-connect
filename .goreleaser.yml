@@ -25,8 +25,3 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
-signs:
-  - artifacts: all
-    cmd: cosign
-    args: ["sign-blob", "--key=${{ .Env.COSIGN_KEY }}", "${artifact}"]
-    signature: "${artifact}.sig"
