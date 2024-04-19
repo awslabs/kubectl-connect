@@ -3,6 +3,10 @@ release:
   github:
     owner: awslabs
     name: kubectl-connect
+  sign:
+    artifacts: checksum
+    cmd: gpg
+    args: ["--batch", "--yes", "--output", "${signature}", "--detach-sign", "${artifact}"]
 builds:
   - id: kubectl-connect
     goos:
@@ -17,6 +21,8 @@ builds:
       - GO111MODULE=on
     main: cmd/plugin/main.go
     ldflags: -s -w -X github.com/awslabs/kubectl-connect/pkg/version.version=
+    hooks:
+      post: gpg --batch --yes --detach-sign --output {{ .Path }}.sig {{ .Path }}
 archives:
   - id: kubectl-connect
     builds:
